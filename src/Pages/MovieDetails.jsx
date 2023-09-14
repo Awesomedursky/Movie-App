@@ -35,7 +35,7 @@ const MovieDetails = () => {
     if (!loading) {
       setTimeout(() => {
         setIsLoading(false);
-      }, 3000);
+      }, 1000);
     }
   }, [loading]);
 
