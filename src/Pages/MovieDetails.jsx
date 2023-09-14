@@ -43,7 +43,7 @@ const MovieDetails = () => {
     <div className='flex flex-row'>
       {/* Sidebar */}
       <div className=' hidden sm:flex  py-2 md:py-5  border-r-[rgba(0,0,0,0.55)] border-r-[1px] h-screen rounded-r-[2rem] border-[rgba(0,0,0,0.30)] flex-col  justify-between'>
-        <Link to='/' className='px-5 md:text-2xl font-bold flex gap-x-2 items-center text-black'>
+        <Link to='/' className='px-5 md:text-2xl font-bold flex gap-x-2 items-center text-black hover:drop-shadow-[0px_0px_10px_#BE123C]'>
           <img src={Logo} alt='logo' className='h-5 md:h-auto' />
           MovieBox
         </Link>
