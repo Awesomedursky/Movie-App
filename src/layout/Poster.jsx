@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import Logo from '../assets/Logo.svg';
+import Search from '../assets/Search.svg';
 
 const Poster = () => {
   return (
@@ -8,7 +10,7 @@ const Poster = () => {
       <header className='flex  justify-between flex-wrap items-center mb-[4rem] md:mb-[5.81rem] gap-4'>
         {/* logo */}
         <Link to='/' className='md:text-2xl font-bold flex gap-1 md:gap-4 items-center justify-center text-white'>
-          <img src='./src/assets/Logo.svg' alt='logo' className='h-10 md:h-auto' />
+          <img src={Logo} alt='logo' className='h-10 md:h-auto' />
           MovieBox
         </Link>
 
@@ -17,14 +19,14 @@ const Poster = () => {
           {/* Input box */}
           <input type='text' placeholder='What do you want to watch?' className=' bg-transparent border rounded-md py-[0.375rem] px-[0.625rem] w-full outline-none text-white focus:border-[2px]  transition- duration-300 2xl:text-xl 2xl:p-3' />
           {/* Icon */}
-          <img src='/src/assets/Search.svg' alt='search-icon' className='w-4 h-4 absolute right-2 2xl:w-6 2xl:h-6' />
+          <img src='./src/assets/Search.svg' alt='search-icon' className='w-4 h-4 absolute right-2 2xl:w-6 2xl:h-6' />
         </div>
 
         {/* Menu */}
         <div className='flex items-center gap-5'>
           <Link className=' md:text-base font-bold text-white'>Sign in</Link>
           <button>
-            <img src='/src/assets/Menu.svg' alt='menu-icon' className=' w-6 md:w-auto' />
+            <img src='./src/assets/Menu.svg' alt='menu-icon' className=' w-6 md:w-auto' />
           </button>
         </div>
       </header>
@@ -71,6 +73,6 @@ const Poster = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Poster
