@@ -1,3 +1,4 @@
+import Chevron from '../assets/Chevron.svg'
 import { Link } from 'react-router-dom';
 import useFetch from 'use-http';
 import { BallTriangle } from 'react-loader-spinner';
@@ -35,7 +36,7 @@ const FeaturedMovie = () => {
         <p className=' text-2xl md:text-4xl 2xl:text-5xl font-bold'>Featured Movie</p>
 
         <Link className='text-[#BE123C] flex hover:drop-shadow-[0px_0px_5px_black] active:scale-[1.1]' to='/all'>
-          See more <img src='/src/assets/Chevron-right.svg' alt='right icon logo' />
+          See more <img src={Chevron} alt='right icon logo' />
         </Link>
       </div>
 

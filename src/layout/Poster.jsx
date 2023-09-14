@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom"
 import Logo from '../assets/Logo.svg';
 import Search from '../assets/Search.svg';
+import Menu from '../assets/Menu.svg';
+import imdb from '../assets/imdb.svg';
+import tomato from '../assets/tomato.svg';
+import Play from '../assets/Play.svg';
 
 const Poster = () => {
   return (
@@ -19,14 +23,14 @@ const Poster = () => {
           {/* Input box */}
           <input type='text' placeholder='What do you want to watch?' className=' bg-transparent border rounded-md py-[0.375rem] px-[0.625rem] w-full outline-none text-white focus:border-[2px]  transition- duration-300 2xl:text-xl 2xl:p-3' />
           {/* Icon */}
-          <img src='./src/assets/Search.svg' alt='search-icon' className='w-4 h-4 absolute right-2 2xl:w-6 2xl:h-6' />
+          <img src={Search} alt='search-icon' className='w-4 h-4 absolute right-2 2xl:w-6 2xl:h-6' />
         </div>
 
         {/* Menu */}
         <div className='flex items-center gap-5'>
           <Link className=' md:text-base font-bold text-white'>Sign in</Link>
           <button>
-            <img src='./src/assets/Menu.svg' alt='menu-icon' className=' w-6 md:w-auto' />
+            <img src={Menu} alt='menu-icon' className=' w-6 md:w-auto' />
           </button>
         </div>
       </header>
@@ -39,11 +43,11 @@ const Poster = () => {
         {/* Movie rating*/}
         <div className='text-white flex gap-8 font-normal mb-4 justify-center md:justify-normal 2xl:text-2xl 2xl:mb-8'>
           <div className='flex items-center gap-3'>
-            <img src='/src/assets/imdb.svg' alt='imdb logo' className='2xl:w-16 2xl:h-8' />
+            <img src={imdb} alt='imdb logo' className='2xl:w-16 2xl:h-8' />
             <p className=''>86.0/100</p>
           </div>
           <div className='flex items-center gap-3'>
-            <img src='/src/assets/tomato.svg' alt='tomato logo' className='2xl:w-16 2xl:h-8' />
+            <img src={tomato} alt='tomato logo' className='2xl:w-16 2xl:h-8' />
             <p>97%</p>
           </div>
         </div>
@@ -56,7 +60,7 @@ const Poster = () => {
           <div className='flex justify-center md:justify-normal'>
             <button className='text-white bg-[#BE123C] px-4 py-2 rounded-md text-sm 2xl:text-xl font-bold flex transition-all 300 gap-x-2 items-center'>
               {' '}
-              <img src='/src/assets/Play.svg' alt='play icon' className='2xl:h-8' />
+              <img src={Play} alt='play icon' className='2xl:h-8' />
               <span>WATCH TRAILER</span>
             </button>
           </div>

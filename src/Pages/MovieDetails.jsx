@@ -1,3 +1,12 @@
+import Logo from '../assets/Logo.svg';
+import Home from '../assets/Home.svg';
+import Projector from '../assets/Projector.svg'
+import TV from '../assets/TV.svg'
+import Calender from '../assets/Logout.svg'
+import Logout from '../assets/Logout.svg'
+
+
+
 import { Link, NavLink, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -35,23 +44,23 @@ const MovieDetails = () => {
       {/* Sidebar */}
       <div className=' hidden sm:flex  py-2 md:py-5  border-r-[rgba(0,0,0,0.55)] border-r-[1px] h-screen rounded-r-[2rem] border-[rgba(0,0,0,0.30)] flex-col  justify-between'>
         <Link to='/' className='px-5 md:text-2xl font-bold flex gap-x-2 items-center text-black'>
-          <img src='/src/assets/Logo.svg' alt='logo' className='h-5 md:h-auto' />
+          <img src={Logo} alt='logo' className='h-5 md:h-auto' />
           MovieBox
         </Link>
 
         {/* Nav Links */}
         <div>
           <NavLink className='link' to='/'>
-            <img src='/src/assets/Home.svg' alt='home-icon' /> Home
+            <img src={Home} alt='home-icon' /> Home
           </NavLink>
           <NavLink className='link' to='/movies'>
-            <img src='/src/assets/Movie Projector.svg' alt='video-icon' /> Movies
+            <img src={Projector} alt='video-icon' /> Movies
           </NavLink>
           <NavLink className='link' to='/series'>
-            <img src='/src/assets/TV Show.svg' alt='tv-show-icon' /> TV Series
+            <img src={TV} alt='tv-show-icon' /> TV Series
           </NavLink>
           <NavLink className='link' to='/'>
-            <img src='/src/assets/Calendar.svg' alt='calender-icon' /> Upcoming
+            <img src={Calender} alt='calender-icon' /> Upcoming
           </NavLink>
         </div>
 
@@ -64,7 +73,7 @@ const MovieDetails = () => {
 
         {/* Logout */}
         <div className='flex mx-5 mt-2'>
-          <img src='/src/assets/Logout.svg' alt='logout-icon' />
+          <img src={Logout} alt='logout-icon' />
           <p className=' text-xl font-semibold text-[#666]'>Log out</p>
         </div>
       </div>
