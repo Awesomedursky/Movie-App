@@ -6,7 +6,7 @@ const MovieDetailsCard = ({ poster, title, time, genre, runtime, preview }) => {
 
   return (
     <div className='flex flex-col md:items-start flex-1 gap-y-5'>
-      <img src={`https://image.tmdb.org/t/p/original${poster}`} alt={`${poster}`} className='h-[20vh] md:h-[20rem] md:w-[20rem] rounded-2xl' />
+      <img src={`https://image.tmdb.org/t/p/original${poster}`} alt={`${poster}`} className='h-[60vh] md:h-[20rem] md:w-[20rem] rounded-2xl' />
       <div className='max-w-[50rem] flex flex-col items-start'>
         <h3 data-testid='movie-title' className=' text-[#666] text-2xl font-bold'>
           {title}

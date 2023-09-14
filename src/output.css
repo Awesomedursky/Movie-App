@@ -670,6 +670,10 @@ video {
   height: 20vh;
 }
 
+.h-\[40vh\]{
+  height: 40vh;
+}
+
 .w-4{
   width: 1rem;
 }
