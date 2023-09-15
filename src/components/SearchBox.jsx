@@ -12,8 +12,6 @@ const SearchBox = () => {
   const [input, setInput] = useState('');
   const { loading, error, data } = useFetch(`https://api.themoviedb.org/3/search/movie?query=${input}`, options, [input]);
 
-  console.log(data);
-
   return (
     <>
       <div className=' relative w-[50rem] md:w-fit order-last md:order-none flex justify-center items-center z-20'>
@@ -25,7 +23,7 @@ const SearchBox = () => {
         </div>
 
         {input && (
-          <div className='absolute h-[80vh] flex flex-col w-full bg-white/30 backdrop-blur-3xl  rounded-xl p-4 top-14 scrollbar-thin overflow-y-auto z-30 gap-3 drop-shadow-[0_0_10px_black]'>
+          <div className='absolute h-[70vh] md:h-[80vh] flex flex-col w-full bg-white/30 backdrop-blur-3xl  rounded-xl p-4 top-14 scrollbar-thin overflow-y-auto z-30 gap-3 drop-shadow-[0_0_10px_black]'>
             {loading && (
               <div className='flex items-center justify-center h-full gap-5'>
                 <BallTriangle height={100} width={100} radius={5} color='#4fa94d' ariaLabel='ball-triangle-loading' />
@@ -44,8 +42,9 @@ const SearchBox = () => {
                 />
               </Link>
             ))}
+            {data?.results.length === 0 && <div className='flex justify-center items-center text-white'>{`${input} not found`}</div>}
 
-            {error && <p>{error.name}</p>}
+            {error && <div className='flex justify-center items-center text-white'>{error.message}</div>}
           </div>
         )}
       </div>

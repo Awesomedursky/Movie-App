@@ -1399,6 +1399,10 @@ a:active {
     height: 15rem;
   }
 
+  .md\:h-\[80vh\]{
+    height: 80vh;
+  }
+
   .md\:w-96{
     width: 24rem;
   }
