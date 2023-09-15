@@ -39,7 +39,7 @@ const MovieCard = ({ img, date, title, vote, genre }) => {
 
       {/* Series Lable amd Favourite Icon */}
 
-      <div className='absolute  z-20 left-2 top-2 right-2   flex items-center justify-between'>
+      <div className='absolute  z-10 left-2 top-2 right-2   flex items-center justify-between'>
         <p className='rounded-xl px-2 py-1 bg-[rgba(243,244,246,0.5)] backdrop-blur-[1px] font-bold'>TV SERIES</p>
 
         <button>

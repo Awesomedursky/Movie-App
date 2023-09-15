@@ -1,36 +1,31 @@
 import { Link } from "react-router-dom"
 import Logo from '../assets/Logo.svg';
-import Search from '../assets/Search.svg';
 import Menu from '../assets/Menu.svg';
 import imdb from '../assets/imdb.svg';
 import tomato from '../assets/tomato.svg';
 import Play from '../assets/Play.svg';
+import SearchBox from '../components/SearchBox';
 
 const Poster = () => {
   return (
     // Homepage Poster
-    <div className='bg-hero-pattern bg-center bg-cover md:h-[90vh] md:px-8 2xl:px-14 p-4 md:mb-2 relative'>
+    <div className='bg-hero-pattern bg-center bg-cover md:h-[90vh] 2xl:px-14 p-4 md:mb-2 relative'>
       {/* page header */}
       <header className='flex  justify-between flex-wrap items-center mb-[4rem] md:mb-[5.81rem] gap-4'>
         {/* logo */}
         <Link to='/' className='md:text-2xl font-bold flex gap-1 md:gap-4 items-center justify-center text-white'>
           <img src={Logo} alt='logo' className='h-10 md:h-auto' />
-          MovieBox
+          <span className="hidden md:flex">MovieBox</span>
         </Link>
 
         {/* Search Box */}
-        <div className='relative md:w-96 2xl:w-[35rem]  h-9 flex justify-between items-center transition-all duration-300 order-last md:order-none mt-4 md:mt-0 w-full'>
-          {/* Input box */}
-          <input type='text' placeholder='What do you want to watch?' className=' bg-transparent border rounded-md py-[0.375rem] px-[0.625rem] w-full outline-none text-white focus:border-[2px]  transition- duration-300 2xl:text-xl 2xl:p-3' />
-          {/* Icon */}
-          <img src={Search} alt='search-icon' className='w-4 h-4 absolute right-2 2xl:w-6 2xl:h-6' />
-        </div>
+        <SearchBox />
 
         {/* Menu */}
         <div className='flex items-center gap-5'>
-          <Link className=' md:text-base font-bold text-white'>Sign in</Link>
+          <Link className='hidden md:flex md:text-base font-bold text-white'>Sign in</Link>
           <button>
-            <img src={Menu} alt='menu-icon' className=' w-6 md:w-auto' />
+            <img src={Menu} alt='menu-icon' className=' w-10 md:w-auto' />
           </button>
         </div>
       </header>
